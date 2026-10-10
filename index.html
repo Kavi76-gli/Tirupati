@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Tirupati Matka | Community</title>
+
+    <meta name="description"
+          content="Visit our platform and connect with our community for announcements and updates.">
+
+    <meta name="theme-color" content="#f4fff7">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4474936289425923');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4474936289425923&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --green: #079653;
+            --green-dark: #056b40;
+            --green-light: #e6fbed;
+            --text: #183125;
+            --muted: #78877e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(
+                    circle at 12% 15%,
+                    rgba(53, 208, 119, .13),
+                    transparent 34%
+                ),
+                radial-gradient(
+                    circle at 88% 85%,
+                    rgba(53, 208, 119, .12),
+                    transparent 32%
+                ),
+                #f8fcf9;
+        }
+
+        a {
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .page {
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            padding:
+                max(18px, env(safe-area-inset-top))
+                22px
+                max(14px, env(safe-area-inset-bottom));
+        }
+
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 21px;
+            background: linear-gradient(
+                145deg,
+                #19bc76,
+                #047144
+            );
+            box-shadow: 0 8px 20px rgba(7, 150, 83, .20);
+        }
+
+        .brand-name {
+            font-family: "Outfit", sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: -.4px;
+        }
+
+        .brand-caption {
+            color: var(--muted);
+            font-size: 9px;
+            letter-spacing: 1.8px;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 12px;
+            border: 1px solid #dcefe2;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, .8);
+            color: var(--green-dark);
+            font-size: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #15b96d;
+        }
+
+        /* CENTER CONTENT */
+
+        .main {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 0;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 510px;
+            text-align: center;
+            animation: appear .8s ease both;
+        }
+
+        .hero-logo {
+            width: 82px;
+            height: 82px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 23px;
+            border-radius: 27px;
+            color: white;
+            font-size: 36px;
+            background: linear-gradient(
+                145deg,
+                #20c27b,
+                #057447
+            );
+            box-shadow:
+                0 15px 35px rgba(7, 150, 83, .22),
+                inset 0 1px 1px rgba(255,255,255,.45);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 13px;
+            border: 1px solid #d9f0e0;
+            border-radius: 30px;
+            background: rgba(235, 255, 241, .85);
+            color: var(--green-dark);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-top: 21px;
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(37px, 7vw, 59px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            font-weight: 800;
+        }
+
+        h1 span {
+            display: block;
+            color: var(--green);
+        }
+
+        .description {
+            max-width: 400px;
+            margin: 16px auto 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* WHATSAPP BUTTON */
+
+        .actions {
+            display: grid;
+            gap: 12px;
+            margin: 27px auto 0;
+            max-width: 355px;
+        }
+
+        .whatsapp-button {
+            min-height: 61px;
+            padding: 12px 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            border-radius: 18px;
+            background: linear-gradient(
+                135deg,
+                #15bd70,
+                #07864d
+            );
+            color: #fff;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 13px 27px rgba(7, 150, 83, .23);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .whatsapp-button i {
+            font-size: 25px;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 17px 32px rgba(7, 150, 83, .30);
+        }
+
+        .platform-button {
+            min-height: 53px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid #dfece3;
+            border-radius: 17px;
+            background: rgba(255, 255, 255, .85);
+            color: var(--green-dark);
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .2s, transform .2s;
+        }
+
+        .platform-button:hover {
+            transform: translateY(-2px);
+            background: white;
+        }
+
+        .hint {
+            margin-top: 18px;
+            color: #859188;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #87948b;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(17px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        /* SMALL SCREENS */
+
+        @media (max-width: 380px) {
+            .page {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                width: 39px;
+                height: 39px;
+                border-radius: 13px;
+            }
+
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .status {
+                padding: 8px;
+                font-size: 9px;
+            }
+
+            .hero-logo {
+                width: 65px;
+                height: 65px;
+                border-radius: 21px;
+                font-size: 29px;
+                margin-bottom: 16px;
+            }
+
+            h1 {
+                font-size: 37px;
+                margin-top: 16px;
+            }
+
+            .description {
+                font-size: 12px;
+                margin-top: 12px;
+            }
+
+            .actions {
+                margin-top: 20px;
+            }
+
+            .whatsapp-button {
+                min-height: 55px;
+                font-size: 13px;
+            }
+
+            .platform-button {
+                min-height: 47px;
+            }
+
+            .hint {
+                margin-top: 12px;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-height: 650px) {
+            .page {
+                padding-top: max(10px, env(safe-area-inset-top));
+                padding-bottom: max(8px, env(safe-area-inset-bottom));
+            }
+
+            .logo {
+                width: 37px;
+                height: 37px;
+                border-radius: 12px;
+                font-size: 17px;
+            }
+
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .brand-caption {
+                font-size: 8px;
+            }
+
+            .hero-logo {
+                width: 54px;
+                height: 54px;
+                border-radius: 18px;
+                font-size: 25px;
+                margin-bottom: 11px;
+            }
+
+            .eyebrow {
+                padding: 7px 10px;
+                font-size: 9px;
+            }
+
+            h1 {
+                font-size: clamp(30px, 5vw, 43px);
+                margin-top: 12px;
+                letter-spacing: -1px;
+            }
+
+            .description {
+                margin-top: 9px;
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .actions {
+                margin-top: 15px;
+                gap: 8px;
+            }
+
+            .whatsapp-button {
+                min-height: 49px;
+                border-radius: 14px;
+                font-size: 13px;
+            }
+
+            .whatsapp-button i {
+                font-size: 21px;
+            }
+
+            .platform-button {
+                min-height: 43px;
+                border-radius: 13px;
+                font-size: 12px;
+            }
+
+            .hint {
+                margin-top: 9px;
+                font-size: 9px;
+            }
+
+            .footer p {
+                font-size: 9px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="https://tirupati-matka.onrender.com"
+           class="brand"
+           aria-label="Open platform">
+
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <div>
+                <div class="brand-name">TIRUPATI MATKA</div>
+                <div class="brand-caption">Platform & Community</div>
+            </div>
+
+        </a>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Community Hub
+        </div>
+
+    </header>
+
+
+    <!-- CENTER CONTENT -->
+
+    <main class="main">
+
+        <section class="hero">
+
+            <div class="hero-logo">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <div class="eyebrow">
+                <i class="fa-solid fa-sparkles"></i>
+                Welcome to our community
+            </div>
+
+            <h1>
+                Stay connected.
+                <span>Stay informed.</span>
+            </h1>
+
+            <p class="description">
+                Find platform information and community announcements
+                in one convenient place. Join our channel to follow updates.
+            </p>
+
+            <div class="actions">
+
+                <!-- Replace with your real WhatsApp Channel URL -->
+
+                <a href="https://whatsapp.com/channel/0029Vb92KJ9HbFVAWkXAWO2Y"
+                   class="whatsapp-button"
+                   id="whatsappButton"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Join WhatsApp Channel</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"
+                       style="font-size:13px"></i>
+
+                </a>
+
+                <a href="https://tirupati-matka.onrender.com"
+                   class="platform-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fa-solid fa-globe"></i>
+                    Open Platform
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+            <p class="hint">
+                Follow the channel for announcements and updates.
+                Review applicable terms before using platform services.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <p>
+            © <span id="year"></span> Tirupati Matka<br>
+            Platform information and community links.
+        </p>
+    </footer>
+
+</div>
+
+<script>
+    // Automatically update the current year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
