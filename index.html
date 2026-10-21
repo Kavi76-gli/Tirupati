@@ -275,18 +275,31 @@ src="https://www.facebook.com/tr?id=4474936289425923&ev=PageView&noscript=1"
           Join our Telegram channel to stay informed.
         </p>
 
-        <div class="actions">
-          <!-- Replace this placeholder with your actual Telegram channel URL -->
-          <a href="https://t.me/+TgnExX63i6UzMWZl"
-             class="telegram-button"
-             id="telegramButton"
-             target="_blank"
-             rel="noopener noreferrer">
-            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
-            <span>Join Telegram Channel</span>
-            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:13px" aria-hidden="true"></i>
-          </a>
-        </div>
+        <!-- TELEGRAM JOIN BUTTON -->
+<div class="actions">
+
+  <a
+    href="https://t.me/+TgnExX63i6UzMWZl"
+    class="telegram-button"
+    id="telegramButton"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Join Tirupati Matka Telegram Community"
+  >
+
+    <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+
+    <span>Join Telegram Channel</span>
+
+    <i
+      class="fa-solid fa-arrow-up-right-from-square"
+      style="font-size:13px"
+      aria-hidden="true"
+    ></i>
+
+  </a>
+
+</div>
 
         <p class="hint">Follow the channel for announcements and updates.</p>
       </section>
@@ -298,7 +311,86 @@ src="https://www.facebook.com/tr?id=4474936289425923&ev=PageView&noscript=1"
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ==========================================
+  // CONFIGURATION
+  // ==========================================
+
+  const TELEGRAM_LINK = "https://t.me/+TgnExX63i6UzMWZl";
+  const PIXEL_ID = "4474936289425923";
+
+
+  // ==========================================
+  // UPDATE COPYRIGHT YEAR
+  // ==========================================
+
+  const yearElement = document.getElementById("year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+
+  // ==========================================
+  // TELEGRAM BUTTON + META PIXEL TRACKING
+  // ==========================================
+
+  const telegramButton = document.getElementById("telegramButton");
+
+  if (!telegramButton) {
+    console.error("Telegram button was not found.");
+    return;
+  }
+
+  // Always retain the correct invitation URL.
+  telegramButton.href = TELEGRAM_LINK;
+
+  // Prevent duplicate listeners if initialization runs again.
+  if (telegramButton.dataset.trackingAttached === "true") {
+    return;
+  }
+
+  telegramButton.dataset.trackingAttached = "true";
+
+  telegramButton.addEventListener("click", function () {
+
+    // The link opens normally in a new tab.
+    // Do not prevent the default anchor behavior.
+
+    try {
+
+      if (typeof window.fbq === "function") {
+
+        // Record the Telegram CTA click in Meta Pixel.
+        window.fbq(
+          "track",
+          "Lead",
+          {
+            content_name: "Tirupati Matka Telegram Community",
+            content_category: "Telegram Join Button"
+          }
+        );
+
+        console.log("Meta Pixel Lead event requested.");
+
+      } else {
+
+        console.warn(
+          "Meta Pixel is unavailable. Telegram navigation will still work."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.error("Meta Pixel tracking error:", error);
+
+    }
+
+  });
+
+});
+</script>
 </body>
 </html>
